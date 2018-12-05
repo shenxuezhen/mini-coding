@@ -1,2 +1,11 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view style="width:100px;height:100px;background:blue;">
+hello
+<div style="width:100px;height:100px;background:red;">
+你好
+</div>
+<text>nihaoha<text class='add' style="background:yellow">buhao</text></text>
+<text>henhao1</text>
+<icon >asd</icon>
+
+</view>
+<input placeholder='请输入默认样式'/>

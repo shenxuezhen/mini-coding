@@ -5,14 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo: {nickName:'nihao'}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(wx.canIUse('openBluetoothAdapter'))
+    wx.canIUse('getSystemInfoSync.return.screenWidth')
+    wx.canIUse('getSystemInfo.success.screenWidth')
+    wx.canIUse('showToast.object.image')
+    wx.canIUse('onCompassChange.callback.direction')
+    wx.canIUse('request.object.method.GET')
 
+    wx.canIUse('live-player')
+    wx.canIUse('text.selectable')
+    wx.canIUse('button.open-type.contact')
   },
 
   /**
@@ -60,7 +69,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (event) {
+    console.log(event);
   }
 })
