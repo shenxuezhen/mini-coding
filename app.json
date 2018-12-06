@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/upfile/upfile",
     "pages/logs/logs"
   ],
   "window": {

@@ -5,23 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {nickName:'nihao'}
+    animationData: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(wx.canIUse('openBluetoothAdapter'))
-    wx.canIUse('getSystemInfoSync.return.screenWidth')
-    wx.canIUse('getSystemInfo.success.screenWidth')
-    wx.canIUse('showToast.object.image')
-    wx.canIUse('onCompassChange.callback.direction')
-    wx.canIUse('request.object.method.GET')
 
-    wx.canIUse('live-player')
-    wx.canIUse('text.selectable')
-    wx.canIUse('button.open-type.contact')
   },
 
   /**
@@ -35,9 +26,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease',
+      transformOrigin:'10%'
+    })
 
+    this.animation = animation;
+    animation.rotate(180).translate(-45,-20).step();
+    this.setData({
+      animationData: animation.export()
+    })
   },
-
   /**
    * 生命周期函数--监听页面隐藏
    */

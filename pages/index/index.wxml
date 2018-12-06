@@ -1,11 +1,15 @@
-<view style="width:100px;height:100px;background:blue;">
-hello
-<div style="width:100px;height:100px;background:red;">
-你好
-</div>
-<text>nihaoha<text class='add' style="background:yellow">buhao</text></text>
-<text>henhao1</text>
-<icon >asd</icon>
-
+<view class='index-box'>
+  <view class='peo-eyes'>
+    <view></view>
+    <view></view>
+  </view>
+  <view class='peo-nose'>
+    <view></view>
+  </view>
+  <view class='peo-mouth'>
+    <view id="mouth" animation="{{animationData}}"></view>
+  </view>
 </view>
-<input placeholder='请输入默认样式'/>
+<view>
+<button>笑一下</button>
+</view>
